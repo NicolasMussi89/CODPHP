@@ -7,30 +7,30 @@
     <title>Par ou Ímpar</title>
 </head>
 <body>
-    <h1>Código para verificação de par ou ímpar</h1>
+    <h1>verifica se é par ou ímpar</h1>
  
     <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        // Se o formulário foi enviado via método POST
+
         $num = $_POST["numero"];
- 
+
         if (is_numeric($num)) {
-            // Verifica se a entrada é um número
+
             if ($num % 2 == 0) {
-                echo "O número informado é PAR";
+                echo "O número é PAR";
             } else {
-                echo "O número informado é Ímpar";
+                echo "O número  é IMPAR";
             }
         } else {
-            echo "Por favor, insira um número válido.";
+            echo "Insira um número válido.";
         }
     }
     ?>
  
     <form method="post" action="">
-        <label for="numero">Informe um número:</label>
+        <label for="numero">DIgite um número:</label>
         <input type="text" id="numero" name="numero" required>
-        <button type="submit">Verificar</button>
+        <button type="submit">Concluido</button>
     </form>
 </body>
 </html>
